@@ -36,7 +36,7 @@ namespace HRApp.Forms
 
             if (Flag != null)
             {
-                businessTripsBindingSource.Filter = $"ID_Employer='{Flag}'";
+                businessTripsBindingSource.Filter = $"ID_BusinessTrips='{Flag}'";
                 iD_BusinessTripsTextBox.Visible = true;
                 iD_BusinessTripsLabel.Visible = true;
 
@@ -44,8 +44,8 @@ namespace HRApp.Forms
                 dateOfLeavingDateTimePicker.Value = dateOfLeavingDateTimePicker.Value.AddDays(-1);
                 dateOfReturningDateTimePicker.Value = dateOfReturningDateTimePicker.Value.AddDays(1);
                 dateOfReturningDateTimePicker.Value = dateOfReturningDateTimePicker.Value.AddDays(-1);
-                dateOfTheOrderDateTimePicker.Value = dateOfTheOrderDateTimePicker.Value.AddDays(1);
-                dateOfTheOrderDateTimePicker.Value = dateOfTheOrderDateTimePicker.Value.AddDays(-1);
+                dateOfTheOrderDateTimePicker1.Value = dateOfTheOrderDateTimePicker1.Value.AddDays(1);
+                dateOfTheOrderDateTimePicker1.Value = dateOfTheOrderDateTimePicker1.Value.AddDays(-1);
 
                 TopLabel.Text = "Редактирование записи";
             }
@@ -57,8 +57,8 @@ namespace HRApp.Forms
                 dateOfLeavingDateTimePicker.Value = dateOfLeavingDateTimePicker.Value.AddDays(-1);
                 dateOfReturningDateTimePicker.Value = dateOfReturningDateTimePicker.Value.AddDays(1);
                 dateOfReturningDateTimePicker.Value = dateOfReturningDateTimePicker.Value.AddDays(-1);
-                dateOfTheOrderDateTimePicker.Value = System.DateTime.Today.AddDays(1);
-                dateOfTheOrderDateTimePicker.Value = System.DateTime.Today.AddDays(-1);
+                dateOfTheOrderDateTimePicker1.Value = System.DateTime.Today.AddDays(1);
+                dateOfTheOrderDateTimePicker1.Value = System.DateTime.Today.AddDays(-1);
                 fundingSourceComboBox.SelectedIndex = -1;
 
                 TopLabel.Text = "Добавление записи";
@@ -69,7 +69,7 @@ namespace HRApp.Forms
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            if (iD_EmployerTextBox.Text != "" && reasonOfBusinessTripTextBox.Text != "" && fundingSourceComboBox.Text != "" && dateOfLeavingDateTimePicker.Text != "" && dateOfReturningDateTimePicker.Text != "" && dateOfTheOrderDateTimePicker.Text != "")
+            if (iD_EmployerTextBox.Text != "" && reasonOfBusinessTripTextBox.Text != "" && fundingSourceComboBox.Text != "" && dateOfLeavingDateTimePicker.Text != "" && dateOfReturningDateTimePicker.Text != "" && dateOfTheOrderDateTimePicker1.Text != "")
             {
                 try
                 {

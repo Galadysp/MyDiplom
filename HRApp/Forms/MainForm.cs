@@ -290,7 +290,7 @@ namespace HRApp.Forms
 
                         HRAppDBEntities.GetContext().SaveChanges();
 
-                        MessageBox.Show($"Данные удаелны!", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Данные удалены!", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         PageNumber = 0;
                         using (SqlConnection connection = new SqlConnection(connectionstring))
@@ -314,7 +314,7 @@ namespace HRApp.Forms
             }
             else
             {
-                MessageBox.Show($"Необходимо выделить только одну строку", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Необходимо выделить только одну строку.", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -265,7 +265,7 @@ namespace HRApp.Forms
             }
             else
             {
-                MessageBox.Show($"Необходимо выделить только одну строку", "Печать", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Необходимо выделить только одну строку.", "Печать", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -329,7 +329,7 @@ namespace HRApp.Forms
             }
             else
             {
-                MessageBox.Show($"Необходимо выделить только одну строку", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Необходимо выделить только одну строку.", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

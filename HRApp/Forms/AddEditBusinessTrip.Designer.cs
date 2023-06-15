@@ -41,12 +41,11 @@
             this.businessTripsTableAdapter = new HRApp.HRAppDBDataSetTableAdapters.BusinessTripsTableAdapter();
             this.iD_BusinessTripsTextBox = new System.Windows.Forms.TextBox();
             this.iD_EmployerTextBox = new System.Windows.Forms.TextBox();
-            this.dateOfReturningDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dateOfLeavingDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dateOfTheOrderDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.TopLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.fundingSourceComboBox = new System.Windows.Forms.ComboBox();
+            this.dateOfReturningDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateOfLeavingDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateOfTheOrderDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.reasonOfBusinessTripTextBox = new System.Windows.Forms.TextBox();
             this.iD_BusinessTripsLabel = new System.Windows.Forms.Label();
             this.LogoBox = new System.Windows.Forms.PictureBox();
@@ -54,6 +53,7 @@
             this.fundingSourcesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new HRApp.HRAppDBDataSetTableAdapters.TableAdapterManager();
             this.fundingSourcesTableAdapter = new HRApp.HRAppDBDataSetTableAdapters.FundingSourcesTableAdapter();
+            this.fundingSourceComboBox = new System.Windows.Forms.ComboBox();
             iD_EmployerLabel = new System.Windows.Forms.Label();
             dateOfReturningLabel = new System.Windows.Forms.Label();
             dateOfLeavingLabel = new System.Windows.Forms.Label();
@@ -142,7 +142,7 @@
             this.iD_BusinessTripsTextBox.Name = "iD_BusinessTripsTextBox";
             this.iD_BusinessTripsTextBox.ReadOnly = true;
             this.iD_BusinessTripsTextBox.Size = new System.Drawing.Size(248, 27);
-            this.iD_BusinessTripsTextBox.TabIndex = 2;
+            this.iD_BusinessTripsTextBox.TabIndex = 1;
             this.iD_BusinessTripsTextBox.Visible = false;
             // 
             // iD_EmployerTextBox
@@ -151,31 +151,7 @@
             this.iD_EmployerTextBox.Location = new System.Drawing.Point(268, 59);
             this.iD_EmployerTextBox.Name = "iD_EmployerTextBox";
             this.iD_EmployerTextBox.Size = new System.Drawing.Size(136, 27);
-            this.iD_EmployerTextBox.TabIndex = 4;
-            // 
-            // dateOfReturningDateTimePicker
-            // 
-            this.dateOfReturningDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.businessTripsBindingSource, "DateOfReturning", true));
-            this.dateOfReturningDateTimePicker.Location = new System.Drawing.Point(261, 158);
-            this.dateOfReturningDateTimePicker.Name = "dateOfReturningDateTimePicker";
-            this.dateOfReturningDateTimePicker.Size = new System.Drawing.Size(187, 27);
-            this.dateOfReturningDateTimePicker.TabIndex = 6;
-            // 
-            // dateOfLeavingDateTimePicker
-            // 
-            this.dateOfLeavingDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.businessTripsBindingSource, "DateOfLeaving", true));
-            this.dateOfLeavingDateTimePicker.Location = new System.Drawing.Point(33, 158);
-            this.dateOfLeavingDateTimePicker.Name = "dateOfLeavingDateTimePicker";
-            this.dateOfLeavingDateTimePicker.Size = new System.Drawing.Size(188, 27);
-            this.dateOfLeavingDateTimePicker.TabIndex = 8;
-            // 
-            // dateOfTheOrderDateTimePicker
-            // 
-            this.dateOfTheOrderDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.businessTripsBindingSource, "DateOfTheOrder", true));
-            this.dateOfTheOrderDateTimePicker.Location = new System.Drawing.Point(180, 191);
-            this.dateOfTheOrderDateTimePicker.Name = "dateOfTheOrderDateTimePicker";
-            this.dateOfTheOrderDateTimePicker.Size = new System.Drawing.Size(200, 27);
-            this.dateOfTheOrderDateTimePicker.TabIndex = 14;
+            this.iD_EmployerTextBox.TabIndex = 2;
             // 
             // TopLabel
             // 
@@ -192,38 +168,52 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.fundingSourceComboBox);
+            this.groupBox2.Controls.Add(this.dateOfReturningDateTimePicker);
+            this.groupBox2.Controls.Add(this.dateOfLeavingDateTimePicker);
+            this.groupBox2.Controls.Add(this.dateOfTheOrderDateTimePicker1);
             this.groupBox2.Controls.Add(this.reasonOfBusinessTripTextBox);
             this.groupBox2.Controls.Add(this.iD_BusinessTripsLabel);
             this.groupBox2.Controls.Add(this.LogoBox);
             this.groupBox2.Controls.Add(dateOfTheOrderLabel);
             this.groupBox2.Controls.Add(this.SaveButton);
-            this.groupBox2.Controls.Add(this.dateOfTheOrderDateTimePicker);
             this.groupBox2.Controls.Add(this.iD_BusinessTripsTextBox);
             this.groupBox2.Controls.Add(fundingSourceLabel);
             this.groupBox2.Controls.Add(this.iD_EmployerTextBox);
             this.groupBox2.Controls.Add(reasonOfBusinessTripLabel);
             this.groupBox2.Controls.Add(iD_EmployerLabel);
-            this.groupBox2.Controls.Add(this.dateOfReturningDateTimePicker);
             this.groupBox2.Controls.Add(dateOfLeavingLabel);
             this.groupBox2.Controls.Add(dateOfReturningLabel);
-            this.groupBox2.Controls.Add(this.dateOfLeavingDateTimePicker);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 45);
+            this.groupBox2.Location = new System.Drawing.Point(12, 40);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(602, 265);
+            this.groupBox2.Size = new System.Drawing.Size(602, 278);
             this.groupBox2.TabIndex = 49;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Приказ о направлени  в командировку";
+            this.groupBox2.Text = "Приказ об направлении работника в командировку";
             // 
-            // fundingSourceComboBox
+            // dateOfReturningDateTimePicker
             // 
-            this.fundingSourceComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessTripsBindingSource, "FundingSource", true));
-            this.fundingSourceComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.fundingSourceComboBox.FormattingEnabled = true;
-            this.fundingSourceComboBox.Location = new System.Drawing.Point(288, 125);
-            this.fundingSourceComboBox.Name = "fundingSourceComboBox";
-            this.fundingSourceComboBox.Size = new System.Drawing.Size(294, 26);
-            this.fundingSourceComboBox.TabIndex = 58;
+            this.dateOfReturningDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.businessTripsBindingSource, "DateOfReturning", true));
+            this.dateOfReturningDateTimePicker.Location = new System.Drawing.Point(261, 158);
+            this.dateOfReturningDateTimePicker.Name = "dateOfReturningDateTimePicker";
+            this.dateOfReturningDateTimePicker.Size = new System.Drawing.Size(188, 27);
+            this.dateOfReturningDateTimePicker.TabIndex = 6;
+            // 
+            // dateOfLeavingDateTimePicker
+            // 
+            this.dateOfLeavingDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.businessTripsBindingSource, "DateOfLeaving", true));
+            this.dateOfLeavingDateTimePicker.Location = new System.Drawing.Point(33, 158);
+            this.dateOfLeavingDateTimePicker.Name = "dateOfLeavingDateTimePicker";
+            this.dateOfLeavingDateTimePicker.Size = new System.Drawing.Size(188, 27);
+            this.dateOfLeavingDateTimePicker.TabIndex = 5;
+            // 
+            // dateOfTheOrderDateTimePicker1
+            // 
+            this.dateOfTheOrderDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.businessTripsBindingSource, "DateOfTheOrder", true));
+            this.dateOfTheOrderDateTimePicker1.Location = new System.Drawing.Point(180, 191);
+            this.dateOfTheOrderDateTimePicker1.Name = "dateOfTheOrderDateTimePicker1";
+            this.dateOfTheOrderDateTimePicker1.Size = new System.Drawing.Size(190, 27);
+            this.dateOfTheOrderDateTimePicker1.TabIndex = 8;
             // 
             // reasonOfBusinessTripTextBox
             // 
@@ -231,7 +221,7 @@
             this.reasonOfBusinessTripTextBox.Location = new System.Drawing.Point(98, 92);
             this.reasonOfBusinessTripTextBox.Name = "reasonOfBusinessTripTextBox";
             this.reasonOfBusinessTripTextBox.Size = new System.Drawing.Size(484, 27);
-            this.reasonOfBusinessTripTextBox.TabIndex = 57;
+            this.reasonOfBusinessTripTextBox.TabIndex = 3;
             // 
             // iD_BusinessTripsLabel
             // 
@@ -264,7 +254,7 @@
             this.SaveButton.Location = new System.Drawing.Point(399, 197);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(183, 54);
-            this.SaveButton.TabIndex = 16;
+            this.SaveButton.TabIndex = 9;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
@@ -300,11 +290,23 @@
             // 
             this.fundingSourcesTableAdapter.ClearBeforeFill = true;
             // 
+            // fundingSourceComboBox
+            // 
+            this.fundingSourceComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessTripsBindingSource, "FundingSource", true));
+            this.fundingSourceComboBox.DataSource = this.fundingSourcesBindingSource;
+            this.fundingSourceComboBox.DisplayMember = "ID_FundingSource";
+            this.fundingSourceComboBox.FormattingEnabled = true;
+            this.fundingSourceComboBox.Location = new System.Drawing.Point(288, 125);
+            this.fundingSourceComboBox.Name = "fundingSourceComboBox";
+            this.fundingSourceComboBox.Size = new System.Drawing.Size(294, 26);
+            this.fundingSourceComboBox.TabIndex = 4;
+            this.fundingSourceComboBox.ValueMember = "ID_FundingSource";
+            // 
             // AddEditBusinessTrip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 321);
+            this.ClientSize = new System.Drawing.Size(627, 326);
             this.Controls.Add(this.TopLabel);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -331,9 +333,6 @@
         private HRAppDBDataSetTableAdapters.BusinessTripsTableAdapter businessTripsTableAdapter;
         private System.Windows.Forms.TextBox iD_BusinessTripsTextBox;
         private System.Windows.Forms.TextBox iD_EmployerTextBox;
-        private System.Windows.Forms.DateTimePicker dateOfReturningDateTimePicker;
-        private System.Windows.Forms.DateTimePicker dateOfLeavingDateTimePicker;
-        private System.Windows.Forms.DateTimePicker dateOfTheOrderDateTimePicker;
         private System.Windows.Forms.Label TopLabel;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox LogoBox;
@@ -343,6 +342,9 @@
         private HRAppDBDataSetTableAdapters.FundingSourcesTableAdapter fundingSourcesTableAdapter;
         private System.Windows.Forms.Label iD_BusinessTripsLabel;
         private System.Windows.Forms.TextBox reasonOfBusinessTripTextBox;
+        private System.Windows.Forms.DateTimePicker dateOfTheOrderDateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateOfReturningDateTimePicker;
+        private System.Windows.Forms.DateTimePicker dateOfLeavingDateTimePicker;
         private System.Windows.Forms.ComboBox fundingSourceComboBox;
     }
 }

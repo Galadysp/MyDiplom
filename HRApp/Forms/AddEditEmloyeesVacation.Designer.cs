@@ -40,13 +40,14 @@
             this.employeesVacationsTableAdapter = new HRApp.HRAppDBDataSetTableAdapters.EmployeesVacationsTableAdapter();
             this.tableAdapterManager = new HRApp.HRAppDBDataSetTableAdapters.TableAdapterManager();
             this.iD_EmployerTextBox = new System.Windows.Forms.TextBox();
-            this.dateOfTheOrderDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dateOfReturningDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dateOfLeavingDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.vacationTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.vacationsTypeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.vacationsTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TopLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dateOfReturningDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateOfLeavingDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateOfTheOrderDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ID_VacationLabel = new System.Windows.Forms.Label();
             this.iD_VacationTextBox = new System.Windows.Forms.TextBox();
             this.LogoBox = new System.Windows.Forms.PictureBox();
@@ -59,6 +60,7 @@
             vacationTypeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hRAppDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesVacationsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vacationsTypeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacationsTypeBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
@@ -151,44 +153,25 @@
             this.iD_EmployerTextBox.Location = new System.Drawing.Point(269, 59);
             this.iD_EmployerTextBox.Name = "iD_EmployerTextBox";
             this.iD_EmployerTextBox.Size = new System.Drawing.Size(135, 27);
-            this.iD_EmployerTextBox.TabIndex = 4;
-            // 
-            // dateOfTheOrderDateTimePicker
-            // 
-            this.dateOfTheOrderDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.employeesVacationsBindingSource, "ID_Vacation", true));
-            this.dateOfTheOrderDateTimePicker.Location = new System.Drawing.Point(180, 157);
-            this.dateOfTheOrderDateTimePicker.Name = "dateOfTheOrderDateTimePicker";
-            this.dateOfTheOrderDateTimePicker.Size = new System.Drawing.Size(191, 27);
-            this.dateOfTheOrderDateTimePicker.TabIndex = 6;
-            // 
-            // dateOfReturningDateTimePicker
-            // 
-            this.dateOfReturningDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.employeesVacationsBindingSource, "DateOfReturning", true));
-            this.dateOfReturningDateTimePicker.Location = new System.Drawing.Point(261, 124);
-            this.dateOfReturningDateTimePicker.Name = "dateOfReturningDateTimePicker";
-            this.dateOfReturningDateTimePicker.Size = new System.Drawing.Size(188, 27);
-            this.dateOfReturningDateTimePicker.TabIndex = 8;
-            // 
-            // dateOfLeavingDateTimePicker
-            // 
-            this.dateOfLeavingDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.employeesVacationsBindingSource, "DateOfLeaving", true));
-            this.dateOfLeavingDateTimePicker.Location = new System.Drawing.Point(34, 124);
-            this.dateOfLeavingDateTimePicker.Name = "dateOfLeavingDateTimePicker";
-            this.dateOfLeavingDateTimePicker.Size = new System.Drawing.Size(187, 27);
-            this.dateOfLeavingDateTimePicker.TabIndex = 10;
+            this.iD_EmployerTextBox.TabIndex = 2;
             // 
             // vacationTypeComboBox
             // 
             this.vacationTypeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesVacationsBindingSource, "VacationType", true));
-            this.vacationTypeComboBox.DataSource = this.vacationsTypeBindingSource;
+            this.vacationTypeComboBox.DataSource = this.vacationsTypeBindingSource1;
             this.vacationTypeComboBox.DisplayMember = "ID_VacationType";
             this.vacationTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.vacationTypeComboBox.FormattingEnabled = true;
             this.vacationTypeComboBox.Location = new System.Drawing.Point(87, 92);
             this.vacationTypeComboBox.Name = "vacationTypeComboBox";
             this.vacationTypeComboBox.Size = new System.Drawing.Size(495, 26);
-            this.vacationTypeComboBox.TabIndex = 12;
+            this.vacationTypeComboBox.TabIndex = 3;
             this.vacationTypeComboBox.ValueMember = "ID_VacationType";
+            // 
+            // vacationsTypeBindingSource1
+            // 
+            this.vacationsTypeBindingSource1.DataMember = "VacationsType";
+            this.vacationsTypeBindingSource1.DataSource = this.hRAppDBDataSet;
             // 
             // vacationsTypeBindingSource
             // 
@@ -209,27 +192,51 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.dateOfReturningDateTimePicker);
+            this.groupBox2.Controls.Add(this.dateOfLeavingDateTimePicker);
+            this.groupBox2.Controls.Add(this.dateOfTheOrderDateTimePicker);
             this.groupBox2.Controls.Add(this.ID_VacationLabel);
             this.groupBox2.Controls.Add(this.iD_VacationTextBox);
             this.groupBox2.Controls.Add(vacationTypeLabel);
             this.groupBox2.Controls.Add(this.vacationTypeComboBox);
             this.groupBox2.Controls.Add(this.LogoBox);
             this.groupBox2.Controls.Add(this.SaveButton);
-            this.groupBox2.Controls.Add(this.dateOfLeavingDateTimePicker);
             this.groupBox2.Controls.Add(dateOfLeavingLabel);
-            this.groupBox2.Controls.Add(this.dateOfReturningDateTimePicker);
             this.groupBox2.Controls.Add(dateOfReturningLabel);
             this.groupBox2.Controls.Add(dateOfTheOrderLabel);
-            this.groupBox2.Controls.Add(this.dateOfTheOrderDateTimePicker);
             this.groupBox2.Controls.Add(iD_EmployerLabel);
             this.groupBox2.Controls.Add(this.iD_EmployerTextBox);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(12, 45);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(602, 225);
+            this.groupBox2.Size = new System.Drawing.Size(594, 225);
             this.groupBox2.TabIndex = 51;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Приказ о предоставлении отпуска работнику";
+            this.groupBox2.Text = "Приказ об предоставлении отпуска работнику";
+            // 
+            // dateOfReturningDateTimePicker
+            // 
+            this.dateOfReturningDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.employeesVacationsBindingSource, "DateOfReturning", true));
+            this.dateOfReturningDateTimePicker.Location = new System.Drawing.Point(261, 124);
+            this.dateOfReturningDateTimePicker.Name = "dateOfReturningDateTimePicker";
+            this.dateOfReturningDateTimePicker.Size = new System.Drawing.Size(200, 27);
+            this.dateOfReturningDateTimePicker.TabIndex = 5;
+            // 
+            // dateOfLeavingDateTimePicker
+            // 
+            this.dateOfLeavingDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.employeesVacationsBindingSource, "DateOfLeaving", true));
+            this.dateOfLeavingDateTimePicker.Location = new System.Drawing.Point(34, 124);
+            this.dateOfLeavingDateTimePicker.Name = "dateOfLeavingDateTimePicker";
+            this.dateOfLeavingDateTimePicker.Size = new System.Drawing.Size(187, 27);
+            this.dateOfLeavingDateTimePicker.TabIndex = 4;
+            // 
+            // dateOfTheOrderDateTimePicker
+            // 
+            this.dateOfTheOrderDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.employeesVacationsBindingSource, "DateOfTheOrder", true));
+            this.dateOfTheOrderDateTimePicker.Location = new System.Drawing.Point(180, 157);
+            this.dateOfTheOrderDateTimePicker.Name = "dateOfTheOrderDateTimePicker";
+            this.dateOfTheOrderDateTimePicker.Size = new System.Drawing.Size(200, 27);
+            this.dateOfTheOrderDateTimePicker.TabIndex = 6;
             // 
             // ID_VacationLabel
             // 
@@ -248,7 +255,7 @@
             this.iD_VacationTextBox.Name = "iD_VacationTextBox";
             this.iD_VacationTextBox.ReadOnly = true;
             this.iD_VacationTextBox.Size = new System.Drawing.Size(248, 27);
-            this.iD_VacationTextBox.TabIndex = 45;
+            this.iD_VacationTextBox.TabIndex = 1;
             this.iD_VacationTextBox.Visible = false;
             // 
             // LogoBox
@@ -269,10 +276,10 @@
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.SaveButton.ForeColor = System.Drawing.Color.White;
-            this.SaveButton.Location = new System.Drawing.Point(399, 157);
+            this.SaveButton.Location = new System.Drawing.Point(399, 163);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(183, 54);
-            this.SaveButton.TabIndex = 16;
+            this.SaveButton.TabIndex = 7;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
@@ -285,7 +292,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 281);
+            this.ClientSize = new System.Drawing.Size(616, 280);
             this.Controls.Add(this.TopLabel);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -296,6 +303,7 @@
             this.Load += new System.EventHandler(this.AddEditEmloyeesVacation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hRAppDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesVacationsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vacationsTypeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacationsTypeBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -312,9 +320,6 @@
         private HRAppDBDataSetTableAdapters.EmployeesVacationsTableAdapter employeesVacationsTableAdapter;
         private HRAppDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox iD_EmployerTextBox;
-        private System.Windows.Forms.DateTimePicker dateOfTheOrderDateTimePicker;
-        private System.Windows.Forms.DateTimePicker dateOfReturningDateTimePicker;
-        private System.Windows.Forms.DateTimePicker dateOfLeavingDateTimePicker;
         private System.Windows.Forms.ComboBox vacationTypeComboBox;
         private System.Windows.Forms.Label TopLabel;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -324,5 +329,9 @@
         private System.Windows.Forms.Label ID_VacationLabel;
         private System.Windows.Forms.BindingSource vacationsTypeBindingSource;
         private HRAppDBDataSetTableAdapters.VacationsTypeTableAdapter vacationsTypeTableAdapter;
+        private System.Windows.Forms.BindingSource vacationsTypeBindingSource1;
+        private System.Windows.Forms.DateTimePicker dateOfLeavingDateTimePicker;
+        private System.Windows.Forms.DateTimePicker dateOfTheOrderDateTimePicker;
+        private System.Windows.Forms.DateTimePicker dateOfReturningDateTimePicker;
     }
 }

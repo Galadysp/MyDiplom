@@ -20,39 +20,46 @@ namespace HRApp.Forms
 
         private void ButtonAuth_Click(object sender, EventArgs e)
         {
-            try
+            String LoginUser = TextBoxLogin.Text;
+            String PasswordUser = TextBoxPassword.Text;
+
+            if (LoginUser != "" && PasswordUser != "")
             {
-                SqlConnection con = new SqlConnection(@"workstation id=HRAppDB.mssql.somee.com;packet size=4096;user id=galadysp_SQLLogin_4;pwd=5gephl2yz4;data source=HRAppDB.mssql.somee.com;persist security info=False;initial catalog=HRAppDB");
-                SqlDataAdapter sda = new SqlDataAdapter();
-                DataTable dt = new DataTable();
-
-                String LoginUser = TextBoxLogin.Text;
-                String PasswordUser = TextBoxLogin.Text;
-
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Users WHERE Login = @ul AND Password = @up", con);
-                cmd.Parameters.Add("@ul", SqlDbType.VarChar).Value = LoginUser;
-                cmd.Parameters.Add("@up", SqlDbType.VarChar).Value = PasswordUser;
-
-                sda.SelectCommand = cmd;
-                sda.Fill(dt);
-
-                if (dt.Rows.Count > 0)
+                try
                 {
-                    MainForm mainForm = new MainForm();
-                    this.Hide();
-                    mainForm.Show();
-                }
+                    SqlConnection con = new SqlConnection(@"workstation id=HRAppDB.mssql.somee.com;packet size=4096;user id=galadysp_SQLLogin_4;pwd=5gephl2yz4;data source=HRAppDB.mssql.somee.com;persist security info=False;initial catalog=HRAppDB");
+                    SqlDataAdapter sda = new SqlDataAdapter();
+                    DataTable dt = new DataTable();
 
-                else
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Users WHERE Login = @ul AND Password = @up", con);
+                    cmd.Parameters.Add("@ul", SqlDbType.VarChar).Value = LoginUser;
+                    cmd.Parameters.Add("@up", SqlDbType.VarChar).Value = PasswordUser;
+
+                    sda.SelectCommand = cmd;
+                    sda.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        MainForm mainForm = new MainForm();
+                        this.Hide();
+                        mainForm.Show();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Неверный логин и/или пароль, попробуйте снова.", "Ошибка подключения", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Неверный логин и/или пароль, попробуйте снова.", "Ошибка подключения", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.ToString());
                 }
-
             }
-            catch
+            else
             {
-                MessageBox.Show("Возникла непредвиденная ошибка. Обратитесь к системному администратору.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Заполните обязательные поля. Поле «Логин»/«Пароль» не было заполнено.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
         }
 
         private void AuthForm_FormClosed(object sender, FormClosedEventArgs e)

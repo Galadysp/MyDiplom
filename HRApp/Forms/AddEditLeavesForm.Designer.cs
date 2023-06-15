@@ -132,14 +132,14 @@
             this.iD_leaveTextBox.Name = "iD_leaveTextBox";
             this.iD_leaveTextBox.ReadOnly = true;
             this.iD_leaveTextBox.Size = new System.Drawing.Size(263, 27);
-            this.iD_leaveTextBox.TabIndex = 2;
+            this.iD_leaveTextBox.TabIndex = 1;
             this.iD_leaveTextBox.Visible = false;
             // 
             // reasonComboBox
             // 
             this.reasonComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.leavesBindingSource, "Reason", true));
             this.reasonComboBox.DataSource = this.reasonsOfLeavingBindingSource;
-            this.reasonComboBox.DisplayMember = "Reason";
+            this.reasonComboBox.DisplayMember = "ID_Reason";
             this.reasonComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.reasonComboBox.FormattingEnabled = true;
             this.reasonComboBox.Location = new System.Drawing.Point(103, 125);
@@ -159,7 +159,7 @@
             this.iD_EmployerTextBox.Location = new System.Drawing.Point(268, 59);
             this.iD_EmployerTextBox.Name = "iD_EmployerTextBox";
             this.iD_EmployerTextBox.Size = new System.Drawing.Size(150, 27);
-            this.iD_EmployerTextBox.TabIndex = 6;
+            this.iD_EmployerTextBox.TabIndex = 2;
             // 
             // dateOfLeavingDateTimePicker
             // 
@@ -167,7 +167,7 @@
             this.dateOfLeavingDateTimePicker.Location = new System.Drawing.Point(90, 92);
             this.dateOfLeavingDateTimePicker.Name = "dateOfLeavingDateTimePicker";
             this.dateOfLeavingDateTimePicker.Size = new System.Drawing.Size(328, 27);
-            this.dateOfLeavingDateTimePicker.TabIndex = 8;
+            this.dateOfLeavingDateTimePicker.TabIndex = 3;
             // 
             // TopLabel
             // 
@@ -232,7 +232,7 @@
             this.SaveButton.Location = new System.Drawing.Point(424, 98);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(172, 54);
-            this.SaveButton.TabIndex = 16;
+            this.SaveButton.TabIndex = 5;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);

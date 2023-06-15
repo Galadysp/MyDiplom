@@ -57,10 +57,13 @@
             this.s_NameTextBox = new System.Windows.Forms.TextBox();
             this.patronymicTextBox = new System.Windows.Forms.TextBox();
             this.genderComboBox = new System.Windows.Forms.ComboBox();
+            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.positionComboBox = new System.Windows.Forms.ComboBox();
+            this.positionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateOfEmploymentDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dateOfBirthDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.hourComboBox = new System.Windows.Forms.ComboBox();
+            this.hoursBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.salaryTextBox = new System.Windows.Forms.TextBox();
             this.adressTextBox = new System.Windows.Forms.TextBox();
@@ -71,7 +74,9 @@
             this.iNNTextBox = new System.Windows.Forms.TextBox();
             this.sNILSTextBox = new System.Windows.Forms.TextBox();
             this.maritalStatusComboBox = new System.Windows.Forms.ComboBox();
+            this.maritalStatusesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.placeOfBirthComboBox = new System.Windows.Forms.ComboBox();
+            this.statesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.profilePictureTextBox = new System.Windows.Forms.TextBox();
             this.TopLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -80,15 +85,10 @@
             this.PictureBox = new System.Windows.Forms.PictureBox();
             this.LogoBox = new System.Windows.Forms.PictureBox();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.genderTableAdapter = new HRApp.HRAppDBDataSetTableAdapters.GenderTableAdapter();
-            this.positionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.positionsTableAdapter = new HRApp.HRAppDBDataSetTableAdapters.PositionsTableAdapter();
-            this.maritalStatusesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maritalStatusesTableAdapter = new HRApp.HRAppDBDataSetTableAdapters.MaritalStatusesTableAdapter();
-            this.statesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statesTableAdapter = new HRApp.HRAppDBDataSetTableAdapters.StatesTableAdapter();
-            this.hoursBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hoursTableAdapter = new HRApp.HRAppDBDataSetTableAdapters.HoursTableAdapter();
             placeOfBirthLabel2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
@@ -110,14 +110,14 @@
             label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hRAppDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.positionsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoursBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maritalStatusesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.positionsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maritalStatusesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoursBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // placeOfBirthLabel2
@@ -368,11 +368,16 @@
             this.genderComboBox.TabIndex = 10;
             this.genderComboBox.ValueMember = "Gender";
             // 
+            // genderBindingSource
+            // 
+            this.genderBindingSource.DataMember = "Gender";
+            this.genderBindingSource.DataSource = this.hRAppDBDataSet;
+            // 
             // positionComboBox
             // 
             this.positionComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "Position", true));
             this.positionComboBox.DataSource = this.positionsBindingSource;
-            this.positionComboBox.DisplayMember = "Name_Position";
+            this.positionComboBox.DisplayMember = "ID_Position";
             this.positionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.positionComboBox.FormattingEnabled = true;
             this.positionComboBox.Location = new System.Drawing.Point(397, 337);
@@ -380,6 +385,11 @@
             this.positionComboBox.Size = new System.Drawing.Size(185, 26);
             this.positionComboBox.TabIndex = 12;
             this.positionComboBox.ValueMember = "ID_Position";
+            // 
+            // positionsBindingSource
+            // 
+            this.positionsBindingSource.DataMember = "Positions";
+            this.positionsBindingSource.DataSource = this.hRAppDBDataSet;
             // 
             // dateOfEmploymentDateTimePicker
             // 
@@ -401,7 +411,7 @@
             // 
             this.hourComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "Hour", true));
             this.hourComboBox.DataSource = this.hoursBindingSource;
-            this.hourComboBox.DisplayMember = "Name_Hour";
+            this.hourComboBox.DisplayMember = "ID_Hour";
             this.hourComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.hourComboBox.FormattingEnabled = true;
             this.hourComboBox.Location = new System.Drawing.Point(205, 505);
@@ -409,6 +419,11 @@
             this.hourComboBox.Size = new System.Drawing.Size(173, 26);
             this.hourComboBox.TabIndex = 18;
             this.hourComboBox.ValueMember = "ID_Hour";
+            // 
+            // hoursBindingSource
+            // 
+            this.hoursBindingSource.DataMember = "Hours";
+            this.hoursBindingSource.DataSource = this.hRAppDBDataSet;
             // 
             // phoneNumberTextBox
             // 
@@ -496,7 +511,7 @@
             // 
             this.maritalStatusComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "MaritalStatus", true));
             this.maritalStatusComboBox.DataSource = this.maritalStatusesBindingSource;
-            this.maritalStatusComboBox.DisplayMember = "Name_MaritalStatus";
+            this.maritalStatusComboBox.DisplayMember = "ID_MaritalStatus";
             this.maritalStatusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.maritalStatusComboBox.FormattingEnabled = true;
             this.maritalStatusComboBox.Location = new System.Drawing.Point(6, 276);
@@ -505,12 +520,17 @@
             this.maritalStatusComboBox.TabIndex = 38;
             this.maritalStatusComboBox.ValueMember = "ID_MaritalStatus";
             // 
+            // maritalStatusesBindingSource
+            // 
+            this.maritalStatusesBindingSource.DataMember = "MaritalStatuses";
+            this.maritalStatusesBindingSource.DataSource = this.hRAppDBDataSet;
+            // 
             // placeOfBirthComboBox
             // 
             this.placeOfBirthComboBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.placeOfBirthComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "PlaceOfBirth", true));
             this.placeOfBirthComboBox.DataSource = this.statesBindingSource;
-            this.placeOfBirthComboBox.DisplayMember = "Name_State";
+            this.placeOfBirthComboBox.DisplayMember = "ID_State";
             this.placeOfBirthComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.placeOfBirthComboBox.FormattingEnabled = true;
             this.placeOfBirthComboBox.Location = new System.Drawing.Point(205, 457);
@@ -518,6 +538,11 @@
             this.placeOfBirthComboBox.Size = new System.Drawing.Size(173, 26);
             this.placeOfBirthComboBox.TabIndex = 40;
             this.placeOfBirthComboBox.ValueMember = "ID_State";
+            // 
+            // statesBindingSource
+            // 
+            this.statesBindingSource.DataMember = "States";
+            this.statesBindingSource.DataSource = this.hRAppDBDataSet;
             // 
             // profilePictureTextBox
             // 
@@ -648,46 +673,21 @@
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // genderBindingSource
-            // 
-            this.genderBindingSource.DataMember = "Gender";
-            this.genderBindingSource.DataSource = this.hRAppDBDataSet;
-            // 
             // genderTableAdapter
             // 
             this.genderTableAdapter.ClearBeforeFill = true;
-            // 
-            // positionsBindingSource
-            // 
-            this.positionsBindingSource.DataMember = "Positions";
-            this.positionsBindingSource.DataSource = this.hRAppDBDataSet;
             // 
             // positionsTableAdapter
             // 
             this.positionsTableAdapter.ClearBeforeFill = true;
             // 
-            // maritalStatusesBindingSource
-            // 
-            this.maritalStatusesBindingSource.DataMember = "MaritalStatuses";
-            this.maritalStatusesBindingSource.DataSource = this.hRAppDBDataSet;
-            // 
             // maritalStatusesTableAdapter
             // 
             this.maritalStatusesTableAdapter.ClearBeforeFill = true;
             // 
-            // statesBindingSource
-            // 
-            this.statesBindingSource.DataMember = "States";
-            this.statesBindingSource.DataSource = this.hRAppDBDataSet;
-            // 
             // statesTableAdapter
             // 
             this.statesTableAdapter.ClearBeforeFill = true;
-            // 
-            // hoursBindingSource
-            // 
-            this.hoursBindingSource.DataMember = "Hours";
-            this.hoursBindingSource.DataSource = this.hRAppDBDataSet;
             // 
             // hoursTableAdapter
             // 
@@ -708,15 +708,15 @@
             this.Load += new System.EventHandler(this.AddEditEmloyer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hRAppDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.positionsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoursBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maritalStatusesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.positionsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maritalStatusesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoursBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
