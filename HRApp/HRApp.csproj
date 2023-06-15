@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{440C0203-CC5C-4C73-9C7E-299670373EC1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HRApp</RootNamespace>
+    <AssemblyName>HRApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AddEditBusinessTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddEditBusinessTrip.Designer.cs">
+      <DependentUpon>AddEditBusinessTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddEditEmloyeesVacation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddEditEmloyeesVacation.Designer.cs">
+      <DependentUpon>AddEditEmloyeesVacation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddEditEmloyer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddEditEmloyer.Designer.cs">
+      <DependentUpon>AddEditEmloyer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddEditLeavesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddEditLeavesForm.Designer.cs">
+      <DependentUpon>AddEditLeavesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AuthForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuthForm.Designer.cs">
+      <DependentUpon>AuthForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BusinessTripsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BusinessTripsForm.Designer.cs">
+      <DependentUpon>BusinessTripsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeesEducationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeesEducationForm.Designer.cs">
+      <DependentUpon>EmployeesEducationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeesVacationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeesVacationsForm.Designer.cs">
+      <DependentUpon>EmployeesVacationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LeavesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LeavesForm.Designer.cs">
+      <DependentUpon>LeavesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRAppDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HRAppDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusinessTrips.cs" />
+    <Compile Include="Models\EducationLevels.cs" />
+    <Compile Include="Models\EducationPlaces.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeesEducation.cs" />
+    <Compile Include="Models\EmployeesVacations.cs" />
+    <Compile Include="Models\FundingSources.cs" />
+    <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\Hours.cs" />
+    <Compile Include="Models\HRAppModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HRAppModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HRAppModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HRAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HRAppModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HRAppModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HRAppModel2.cs" />
+    <Compile Include="Models\Leaves.cs" />
+    <Compile Include="Models\Majors.cs" />
+    <Compile Include="Models\MaritalStatuses.cs" />
+    <Compile Include="Models\Positions.cs" />
+    <Compile Include="Models\ReasonsOfLeaving.cs" />
+    <Compile Include="Models\States.cs" />
+    <Compile Include="Models\sysdiagrams.cs" />
+    <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\VacationsType.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddEditBusinessTrip.resx">
+      <DependentUpon>AddEditBusinessTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddEditEmloyeesVacation.resx">
+      <DependentUpon>AddEditEmloyeesVacation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddEditEmloyer.resx">
+      <DependentUpon>AddEditEmloyer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddEditLeavesForm.resx">
+      <DependentUpon>AddEditLeavesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AuthForm.resx">
+      <DependentUpon>AuthForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BusinessTripsForm.resx">
+      <DependentUpon>BusinessTripsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeesEducationForm.resx">
+      <DependentUpon>EmployeesEducationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeesVacationsForm.resx">
+      <DependentUpon>EmployeesVacationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LeavesForm.resx">
+      <DependentUpon>LeavesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="Models\HRAppModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HRAppModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="HRAppDBDataSet.xsc">
+      <DependentUpon>HRAppDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HRAppDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HRAppDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HRAppDBDataSet.xss">
+      <DependentUpon>HRAppDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Models\HRAppModel.edmx.diagram">
+      <DependentUpon>HRAppModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Models\HRAppModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HRAppModel.Context.cs</LastGenOutput>
+      <DependentUpon>HRAppModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\HRAppModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HRAppModel.edmx</DependentUpon>
+      <LastGenOutput>HRAppModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

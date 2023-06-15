@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="71ef5eed85a142b98e3cb6f8ec02e142" Name="Diagram1">
+        <EntityTypeShape EntityType="HRAppDBModel.BusinessTrips" Width="1.5" PointX="10.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.EducationLevels" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.EducationPlaces" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.Employee" Width="1.5" PointX="8" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.EmployeesVacations" Width="1.5" PointX="13.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.FundingSources" Width="1.5" PointX="8" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.Gender" Width="1.5" PointX="5.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.Hours" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.Leaves" Width="1.5" PointX="10.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.Majors" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.MaritalStatuses" Width="1.5" PointX="5.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.Positions" Width="1.5" PointX="5.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.ReasonsOfLeaving" Width="1.5" PointX="8" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.States" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.Users" Width="1.5" PointX="2.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.VacationsType" Width="1.5" PointX="11" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRAppDBModel.EmployeesEducation" Width="1.5" PointX="5.25" PointY="6.5" IsExpanded="true" />
+        <AssociationConnector Association="HRAppDBModel.FK_BusinessTrips_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_BusinessTrips_FundingSources1" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_Employee_sEducation_EducationLevels" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_Employee_sEducation_EducationPlaces1" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_EP_States" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_Employee_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_Employee_Hours" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_Employee_MaritalStatuses" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_Employee_Positions" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_Employee_States" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_Employee_sEducation_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_Employee_sVacations_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_Leaves_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_Employee_sVacations_Vacations_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_Leaves_ReasonsOfLeaving" ManuallyRouted="false" />
+        <AssociationConnector Association="HRAppDBModel.FK_Employee_sEducation_Majors" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
